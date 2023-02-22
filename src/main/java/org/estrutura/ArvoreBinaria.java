@@ -102,7 +102,11 @@ public class ArvoreBinaria <T extends Comparable<T>>{
                 }
 
             }if(atual.getNoDir() == null){
-
+                if(pai.getNoEsq() == atual){
+                    pai.setNoEsq(atual.getNoEsq());
+                }else{
+                    pai.setNoDir(atual.getNoEsq());
+                }
             }if(atual.getNoEsq() == null){
 
             }else{
